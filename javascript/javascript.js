@@ -172,8 +172,11 @@ function finalizarCompra(carrito) {
         let carritoDetalle = carrito.filter(carrito => carrito.nombre)
         alert("Detalle de compra\n" + listarDetalle(carritoDetalle) + "Total a pagar $" + total)
 
-        let cuota = Number(prompt("Ingrese cantidad de cuotas\n3 cuotas sin interés de $" + Math.floor(total / 3) + "\n6 cuotas de $" + Math.floor((total * (9 / 100) + total) / 6) + " con 9% de interés" + "\n12 cuotas de $" + Math.floor((total * (18 / 100) + total) / 12) + " con 18% de interés"
+        let cuota = Number(prompt("Ingrese cantidad de cuotas\n1 cuota de $" + total + "\n3 cuotas sin interés de $" + Math.floor(total / 3) + "\n6 cuotas de $" + Math.floor((total * (9 / 100) + total) / 6) + " con 9% de interés" + "\n12 cuotas de $" + Math.floor((total * (18 / 100) + total) / 12) + " con 18% de interés"
         ))
+        if (cuota == 1) {
+            alert("Detalle de compra\n" + listarDetalle(carritoDetalle) + "\nTotal a pagar $" + total + "\nGracias por su compra")
+        }
         if (cuota == 3) {
             alert("Detalle de compra\n" + listarDetalle(carritoDetalle) + "\nTotal a pagar $" + total + " en 3 cuotas de $" + Math.floor(total / 3) + "\nGracias por su compra")
         }
