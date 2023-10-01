@@ -1,0 +1,299 @@
+@font-face {
+  font-family: "Montserrat-VariableFont_wght";
+  src: url(../fonts/Montserrat-VariableFont_wght.ttf);
+}
+
+@font-face {
+  font-family: "RussoOne-Regular";
+  src: url(../fonts/RussoOne-Regular.ttf);
+}
+
+@font-face {
+  font-family: "pacifico";
+  src: url(../fonts/Pacifico-Regular.ttf);
+}
+
+* {
+  margin: 0px;
+  padding: 0px;
+  font-family: "Montserrat-VariableFont_wght";
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Montserrat-VariableFont_wght";
+  background-color: rgb(240, 240, 240);
+
+}
+
+.h3 {
+  padding-top: 20px;
+  text-align: center;
+}
+#contenedorProductos {
+  padding-top: 25px;
+  text-align: center;
+  margin-top: -20px;
+  display: grid;
+  grid-template-columns: 33% 33% 33%;
+  grid-template-rows: auto;
+  color: rgb(182, 1, 1);
+}
+
+.h6 p {
+  font-size: 13px;
+}
+
+.tarjeta {
+  margin: 20px 80px;
+  padding: 20px;
+  text-align: center;
+  width: 405px;  
+  background-color: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
+
+}
+
+.h4 {
+  font-family: "Montserrat-VariableFont_wght";
+  padding-left: 20px;
+}
+
+
+
+h1 {
+  text-align: center;
+  padding-top: 55px;
+  line-height: 25px;
+}
+
+h1 span {
+  font-family: "pacifico";
+  color: chartreuse;
+  padding-top: 100px;
+}
+
+.contenedorCarrito {
+  color: rgb(0, 0, 0);
+}
+
+#carrito {
+  padding-left: 10px;
+  background-color: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
+  width: 30%;
+  height: 100%;
+  top: -1px;
+  right: 0px;
+  position: fixed;
+  z-index: 9;
+  padding-top: 20px;
+  border-top-left-radius: 25px;
+  overflow: visible;
+}
+
+.tarjProdCarrito {
+  display: grid;
+  grid-template-columns: 30% 50%;
+  grid-template-rows: auto;
+  box-shadow: inset;
+  margin-top: 18px;
+  padding: 10px;
+  border-radius: 6px;
+  font-size: 15px;
+  top: 1000px;
+  width: 95%;
+  margin-left: 10px;
+  background-color: rgb(255, 255, 255);
+  box-shadow: inset 0 -3em 3em rgba(255, 255, 255, 0.1),
+    0 0 0 2px rgb(190, 190, 190),
+    0.3em 0.3em 1em rgba(0, 0, 0, 0.3);
+}
+
+
+.tarjProdCarrito img {
+  padding-top: 2px;
+  margin-left: 48px;
+}
+
+.btnCompra {
+  bottom: 30px;
+  right: 40px;
+  position: fixed;
+}
+
+.tituloCarrito {
+
+  color: black;
+  top: 30px;
+  right: 500px;
+  position: fixed;
+}
+
+#verOcultar {
+  background-color: rgb(255, 255, 255);
+  top: -2px;
+  right: -1px;
+  position: fixed;
+  z-index: 999;
+  width: 100px;
+  padding: 10px;
+  border-bottom-left-radius: 15px;
+}
+
+.button img {
+  pointer-events: none;
+}
+
+.button {
+  background-color: #ffffff;
+  width: 100px;
+  height: 30px;
+  border: none;
+  border: 1px solid rgb(0, 0, 0);
+  border-radius: 5px;
+  margin: 10px;
+  z-index: 9999;
+}
+
+.button:hover {
+  background-color: rgba(0, 255, 55, 0.404);
+  content: "hola";
+  color: #ffffff;
+}
+
+#verOcultar img {
+  margin-left: 25px;
+}
+
+.pagar {
+  bottom: 30px;
+  right: 390px;
+  position: fixed;
+}
+
+.oculta {
+  display: none !important;
+
+  color: aliceblue;
+  transition: 15s;
+  content: "hola";
+  color: black;
+
+
+}
+
+.navbar__me---desktop {
+  font-family: "Montserrat-VariableFont_wght";
+  background-color: rgb(29, 29, 29);
+  width: 210px;
+  height: 110vh;
+  position: fixed;
+  font-size: 20px;
+  color: #ffffff;
+}
+
+.filtroCategoria {
+  font-family: "Montserrat-VariableFont_wght";
+  background-color: transparent;
+  text-align: center;
+  color: rgb(255, 255, 255);
+
+  border: none;
+
+  margin-left: 30px;
+  align-items: center;
+}
+
+
+.buscador {
+
+  position: fixed;
+  top: 160px;
+  width: 180px;
+  left: 15px;
+  z-index: 1;
+}
+
+.filtrar {
+  padding-top: 110px;
+}
+
+.filtrar p {
+  font-size: 14px;
+  text-align: center;
+}
+
+footer {
+  background-color: rgb(29, 29, 29);
+  width: 101.5%;
+  height: 60px;
+
+  margin: -25px;
+  margin-top: 25px;
+  bottom: 1112px;
+}
+
+footer p {
+  font-size: 13px;
+  padding-top: 16px;
+  color: #ffffff;
+  text-align: center;
+}
+
+footer p span {
+  color: chartreuse;
+  font-family: "pacifico";
+}
+
+
+
+
+
+
+
+
+.container2 {
+  background-color: aquamarine;
+  width: 100%;
+  height: 100%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.main {
+  font-family: "Montserrat-VariableFont_wght";
+  box-sizing: border-box;
+  margin-left: 210px;
+  left: 2100px;
+
+  z-index: -1000;
+}
+.header {
+  box-sizing: border-box;
+  height: 50vh;
+  background-image: url(../img/heder.png);
+  background-size: cover;
+  width: 100%;
+}
+@media screen and (max-width: 1024px) {
+  #contenedorProductos {
+    grid-template-columns: 50% 50%;
+    grid-template-rows: auto;
+  }
+  #carrito{
+    width: 100%;
+    height: 100%;
+  }
+}
