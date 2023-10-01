@@ -127,21 +127,21 @@ let productos = [
   },
   {
     id: 563,
-    nombre: "Party Summer",
+    nombre: "Lady",
     categoria: "Perfumes",
     stock: 3,
     precio: 1100,
     descripción: "120ml. Fragancias a base de alcohol.",
-    rutaImagen: "ironwarning.jpg"
+    rutaImagen: "lady.png"
   },
   {
     id: 564,
-    nombre: "Party Summer",
+    nombre: "Uva",
     categoria: "Perfumes",
     stock: 3,
     precio: 1100,
     descripción: "120ml. Fragancias a base de alcohol.",
-    rutaImagen: "ironwarning.jpg"
+    rutaImagen: "uva.png"
   },
 ]
 let carrito = []
@@ -168,10 +168,10 @@ navbar.innerHTML = `
   <h1>TOXIC <span>Cleaning</span></h1>
   <div class="filtrar"> 
   <p>Ver productos por categoria</p>
-    <button class="filtroCategoria" id="Ceras Liquidas">Cesras liquidas</button>
-    <button class="filtroCategoria" id="Limpiadores">Limpiadores</button>
-    <button class="filtroCategoria" id="Perfumes">Pefumes</button>
-    <button class="filtroCategoria" id="Exteriores">Exteriores</button>
+    <button class="filtroCategoria" id="Ceras Liquidas">CERAS LIQUIDAS</button>
+    <button class="filtroCategoria" id="Limpiadores">LIMPIADORES</button>
+    <button class="filtroCategoria" id="Perfumes">PERFUMES</button>
+    <button class="filtroCategoria" id="Exteriores">EXTERIORES</button>
   </div>
   </nav>
   `
@@ -246,17 +246,13 @@ function renderizarCarrito(productosEnCarrito) {
       let tarjProdCarrito = document.createElement("div")
 
       tarjProdCarrito.innerHTML = `
-
         <div class="tarjProdCarrito"> 
-        <img src=./img/${producto.rutaImagen} width="50px"/>
-        <div>
-        <div class="h5">${producto.nombre}</div>
-        <div>$${producto.subtotal}</div>
-        <div>Unidades ${producto.unidades}</div>
-        </div>
-    
-      
-      </div>
+          <img src=./img/${producto.rutaImagen} width="50px"/>
+          <div>
+          <div class="h5">${producto.nombre}</div>
+          <div>$${producto.subtotal}</div>
+          <div>Unidades ${producto.unidades}</div>
+        </div>      
       `
       total += producto.subtotal
       divCarrito.appendChild(tarjProdCarrito)
@@ -270,7 +266,6 @@ function renderizarCarrito(productosEnCarrito) {
       <div class="h5">TOTAL A PAGAR</div>
       <div>$${total}</div>
     </div>
-    
     `
     divCarrito.appendChild(divSubTotal)
 
@@ -314,244 +309,3 @@ function filtrarPorCategoria(e, productos) {
   renderizarProductos(productosFiltrados)
 }
 
-/* let nombre = "Juan"
-localStorage.setItem("nombre", nombre)
-localStorage.setItem("tieneMascotas", true)
-localStorage.setItem("edad", 20)
-localStorage.setItem("nombre", "Maria")
-
-let tieneMascotas = Boolean(localStorage.getItem("tieneMascotas"))
-let edad = Number(localStorage.getItem("edad"))
-
-console.log(tieneMascotas)
-console.log(edad)
-
-console.log(localStorage.length)
-
-console.log(localStorage.key(0))
-let valor = localStorage.getItem("tieneMascotas")
-// let valor = localStorage.getItem(localStorage.key(0))
-console.log(valor)
-
-for (let i = 0; i < localStorage.length; i++) {
-  let nombreClave = localStorage.key(i)
-  let valor = localStorage.getItem(nombreClave)
-  console.log(valor)
-}
-
-localStorage.setItem("carrito", [{}, {}, {}])
-localStorage.removeItem("carrito")
-
-localStorage.clear() */
-
-/* // de JS a JSON stringify => string
-// de JSON a JS parse => tipo de dato original obj o arr
-let objetoJS = { nombre: "Juan", apellido : "Perez", edad: 20 } // object
-let objetoJSON = '{"nombre":"Juan","apellido":"Perez","edad":20}' // string
-let objetoJSON2 = JSON.stringify(objetoJS)
-console.log(objetoJSON)
-console.log(objetoJSON2)
-
-// almacenar objeto previamente convertido a string (notación JSON)
-localStorage.setItem("pruebaObj", objetoJSON2)
-
-// recuperar objeto JS almacenado como string en el storage
-let stringRecuperado = localStorage.getItem("pruebaObj")
-console.log(stringRecuperado)
-let objetoJSRecuperado = JSON.parse(stringRecuperado)
-console.log(objetoJSRecuperado)
-console.log(objetoJSRecuperado.apellido)
-
-let algoQueNoExiste = localStorage.getItem("cualquierCosa")
-console.log(algoQueNoExiste)
-
-let nullAJSON = JSON.stringify(algoQueNoExiste)
-console.log(nullAJSON) */
-
-
-
-/* let salida = ""
-for (let i = 0; i < productos.length; i++) {
-  salida = salida + productos[i].id + " - " + productos[i].nombre + " - " + productos[i].categoria + "\n"
-}
-alert(salida) */
-
-/* 
-let salida = "Lista:\n"
-for (const producto of productos) {  
-  salida = salida + producto.id + " - " + producto.nombre + " - " + producto.categoria + "\n"
-}
-alert(salida) */
-
-
-/* let salida = "Lista:\n"
-productos.forEach(producto => {
-  salida = salida + producto.id + " - " + producto.nombre + " - " + producto.categoria + "\n"
-})
-alert(salida) */
-
-/* let salida = "Lista:\n"+productos.map(producto => {
-  return producto.id + " - " + producto.nombre + " - " + producto.categoria
-}).join("\n")
-alert(salida) */
-
-
-
-/* buscador.addEventListener("input", buscarValorInput)
-buscador.addEventListener("change", () => prueba("change"))
-
-function buscarValorInput() {
-  console.log(buscador.value)
-} */
-
-/* let boton = document.getElementById("prueba")
-console.dir(boton)
-
-// boton.addEventListener("click", miFuncion)
-// boton.addEventListener("click", () => miFuncion("Juan"))
-
-// boton.onclick = miFuncion
-// boton.onclick = () => miFuncion("Juan")
-
-function miFuncion(nombre) {
-  alert("HOLA " + nombre)
-} */
-
-/* let cajita = document.getElementById("cajita")
-cajita.addEventListener("mousedown", () => prueba("mousedown"))
-cajita.addEventListener("mouseover", () => prueba("mouseover"))
-cajita.addEventListener("mousemove", () => prueba("mousemove"))
-cajita.addEventListener("mouseout", () => prueba("mouseout"))
-
-*/
-
-
-
-/* buscador.addEventListener("input", buscarValorInput)
-buscador.addEventListener("change", () => prueba("change"))
-
-function buscarValorInput() {
-  console.log(buscador.value)
-} */
-
-/* let boton = document.getElementById("prueba")
-console.dir(boton)
-
-// boton.addEventListener("click", miFuncion)
-// boton.addEventListener("click", () => miFuncion("Juan"))
-
-// boton.onclick = miFuncion
-// boton.onclick = () => miFuncion("Juan")
-
-function miFuncion(nombre) {
-  alert("HOLA " + nombre)
-} */
-
-/* let cajita = document.getElementById("cajita")
-cajita.addEventListener("mousedown", () => prueba("mousedown"))
-cajita.addEventListener("mouseover", () => prueba("mouseover"))
-cajita.addEventListener("mousemove", () => prueba("mousemove"))
-cajita.addEventListener("mouseout", () => prueba("mouseout"))
-
-*/
-
-/* principal(productos)
-
-function principal(productos) {
-    let carrito = []
-
-    alert("Bienvenido a Toxic Cleaning \nVentas de productos para limpieza de autos")
-    do {
-        opcion = Number(prompt("Ingrese opcion\n1 - Para ver productos por categoría\n2 - Finalizar compra \n0 - Salir"))
-        switch (opcion) {
-            case 1:
-                categoriaCarrito(productos, carrito)
-                break
-            case 2:
-                finalizarCompra(carrito)
-                break
-            default:
-                break
-        }
-    } while (opcion != 0)
-    alert("Gracias por elegirnos by Toxic Cleaning")
-}
-
-function listarDetalle(carrito) {
-    let lista = ""
-    carrito.forEach(carrito => lista += "Producto: " + carrito.nombre + " | Unidades: " + carrito.unidades + " | Total: $" + carrito.subtotal + "\n")
-    return lista
-}
-
-function listar(productoBuscado) {
-    let lista = ""
-    productoBuscado.forEach(producto => lista += "Id " + producto.id + " - " + producto.nombre + "\n")
-    return lista
-}
-
-function categoriaCarrito(productos, carrito) {
-    let categoria = Number(prompt("Catálogo\nIngrese categoria\n1 - Ceras Liquidas\n2 - Exteriores\n3 - Limpiadores "))
-    if (categoria == 1) {
-        categoria = "Ceras Liquidas"
-    }
-    else if (categoria == 2) {
-        categoria = "exteriores"
-    }
-    else if (categoria == 3) {
-        categoria = "limpieadores"
-    }
-    let categoriaElegida = productos.filter(producto => (producto.categoria === categoria))
-    let productoId = Number(prompt("Ingrese id de prodcuto para ver en detalle\n" + listar(categoriaElegida)))
-    if (productoId = productos.find(producto => producto.id === productoId)) {
-        alert("Nombre:\n" + productoId.nombre + "\n" + "Descripción:\n" + productoId.descripción + "\n" + "Precio:\n$" + productoId.precio)
-    }
-    let opcionFinal = prompt("Ingresar " + productoId.nombre + " al carrito? si o no")
-    if (opcionFinal === "si") {
-        let productoEnCarrito = carrito.find(producto => producto.id === productoId.id)
-        if (productoId.stock > 0) {
-            if (productoEnCarrito) {
-                productoEnCarrito.unidades++
-                productoEnCarrito.subtotal = productoEnCarrito.unidades * productoEnCarrito.precioUnitario
-            } else {
-                carrito.push({
-                    id: productoId.id,
-                    nombre: productoId.nombre,
-                    precioUnitario: productoId.precio,
-                    unidades: 1,
-                    subtotal: productoId.precio
-                })
-            }
-            productoId.stock--
-            alert("Se agregó " + productoId.nombre + " al carrito")
-        } else {
-            alert("No hay más stock del producto seleccionado")
-        }
-        console.log(carrito)
-    }
-}
-
-function finalizarCompra(carrito) {
-    if (carrito.length === 0) {
-        alert("Primero debe agregar productos al carrito")
-    } else {
-        let total = carrito.reduce((acum, producto) => acum + producto.subtotal, 0)
-        let carritoDetalle = carrito.filter(carrito => carrito.nombre)
-        alert("Detalle de compra\n" + listarDetalle(carritoDetalle) + "Total a pagar $" + total)
-
-        let cuota = Number(prompt("Ingrese cantidad de cuotas\n1 cuota de $" + total + "\n3 cuotas sin interés de $" + Math.floor(total / 3) + "\n6 cuotas de $" + Math.floor((total * (9 / 100) + total) / 6) + " con 9% de interés" + "\n12 cuotas de $" + Math.floor((total * (18 / 100) + total) / 12) + " con 18% de interés"
-        ))
-        if (cuota == 1) {
-            alert("Detalle de compra\n" + listarDetalle(carritoDetalle) + "\nTotal a pagar $" + total + "\nGracias por su compra")
-        }
-        if (cuota == 3) {
-            alert("Detalle de compra\n" + listarDetalle(carritoDetalle) + "\nTotal a pagar $" + total + " en 3 cuotas de $" + Math.floor(total / 3) + "\nGracias por su compra")
-        }
-        else if (cuota == 6) {
-            alert("Detalle de compra\n" + listarDetalle(carritoDetalle) + "\nTotal a pagar con 9% de interés $" + Math.floor((total * (9 / 100) + total)) + " en 6 cuotas de $" + Math.floor((total * (9 / 100) + total) / 6) + "\nGracias por su compra")
-        }
-        if (cuota == 12) {
-            alert("Detalle de compra\n" + listarDetalle(carritoDetalle) + "\nTotal a pagar con 18% de interés $" + Math.floor((total * (18 / 100) + total)) + " en 12 cuotas de $" + Math.floor((total * (18 / 100) + total) / 12) + "\nGracias por su compra")
-        }
-        opcion = 0
-    }
-} */
