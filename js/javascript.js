@@ -63,7 +63,7 @@ let productos = [
     rutaImagen: "hitsbones.jpg"
   },
   {
-    id: 1709,
+    id: 1710,
     nombre: "Gel Shine",
     categoria: "Exteriores",
     stock: 1,
@@ -164,8 +164,9 @@ function filtrarYRenderizar(productos) {
 let navbar = document.getElementById("navBar")
 navbar.className = "navbar__me---desktop"
 navbar.innerHTML = `
-  <nav class="navbar__me---desktop" id="buscador">
+  <nav id="buscador">
   <h1>TOXIC <span>Cleaning</span></h1>
+  
   <div class="filtrar"> 
   <p>Ver productos por categoria</p>
     <button class="filtroCategoria" id="Ceras Liquidas">CERAS LIQUIDAS</button>
@@ -181,7 +182,7 @@ function renderizarProductos(productos, carrito) {
   contenedor.innerHTML = ""
   productos.forEach(producto => {
     let tarjeta = document.createElement("div")
-    tarjeta.className = "tarjeta"
+    tarjeta.className = "tarjeta col"
     tarjeta.innerHTML = `
     <div class="h2">${producto.nombre}</div>
     <div class="h6">${producto.categoria}<div>
@@ -234,14 +235,10 @@ function agregarProductoAlCarrito(productos, carrito, e) {
 let total = 0;
 function renderizarCarrito(productosEnCarrito) {
   let divCarrito = document.getElementById("carrito")
-    divCarrito.innerHTML = `<div class="h4">CARRITO DE COMPRA</div>`
-    
+  divCarrito.innerHTML = `<div class="h4">CARRITO DE COMPRA</div>`
   if (productosEnCarrito.length > 0) {
-
-   
-
     let total = 0;
-
+    
     productosEnCarrito.forEach(producto => {
       let tarjProdCarrito = document.createElement("div")
 
@@ -256,22 +253,22 @@ function renderizarCarrito(productosEnCarrito) {
       `
       total += producto.subtotal
       divCarrito.appendChild(tarjProdCarrito)
-      
+
     })
 
     let divSubTotal = document.createElement("div")
-    
+
     divSubTotal.innerHTML = `
     <div class="pagar">
-      <div class="h5">TOTAL A PAGAR</div>
-      <div>$${total}</div>
+      <div class="h5">TOTAL A PAGAR <b>$${total}</b></div>
+
     </div>
     `
     divCarrito.appendChild(divSubTotal)
 
     let boton = document.createElement("button")
     boton.className = "btnCompra"
-    boton.innerHTML = "Finalizar compra"
+    boton.innerHTML = "FINALIZAR COMPRA"
     boton.addEventListener("click", finalizarCompra)
 
     divCarrito.appendChild(boton)
@@ -283,7 +280,7 @@ function finalizarCompra() {
   let carrito = document.getElementById("carrito")
   carrito.innerHTML = ""
   localStorage.removeItem("carrito")
-  
+
 }
 
 let botonVerOcultar = document.getElementById("verOcultar")
