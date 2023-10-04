@@ -210,7 +210,7 @@ function agregarProductoAlCarrito(productos, carrito, e) {
     if (productoEnCarrito) {
       productoEnCarrito.unidades++
       productoEnCarrito.subtotal = productoEnCarrito.unidades * productoEnCarrito.precioUnitario
-      alert("hola1 " + productoEnCarrito.unidades)
+      alert("Agergaste " + productoEnCarrito.unidades + " " + "unidades de " + productoEnCarrito.nombre)
     } else {
       carrito.push({
         rutaImagen: productoBuscado.rutaImagen,
@@ -220,7 +220,7 @@ function agregarProductoAlCarrito(productos, carrito, e) {
         unidades: 1,
         subtotal: productoBuscado.precio
       })
-      alert("hola")
+      alert("Agregaste " + productoBuscado.nombre + " al carrito")
     }
     productoBuscado.stock--
     localStorage.setItem("containerCarrito", JSON.stringify(carrito))
@@ -280,6 +280,7 @@ function finalizarCompra() {
   let carrito = document.getElementById("containerCarrito")
   carrito.innerHTML = ""
   localStorage.removeItem("containerCarrito")
+  alert("Gracias por su compra by TOXIC CLEANING")
 
 }
 

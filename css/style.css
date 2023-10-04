@@ -186,7 +186,7 @@ h1 span {
   font-size: 10px;
 }
 .button span {
-
+  pointer-events: none;
   color: chartreuse;
 
 }
@@ -309,6 +309,7 @@ footer p span {
   #carrito {
     width: 100%;
     height: 100%;
+    z-index: 999;
   }
 
   .main {
