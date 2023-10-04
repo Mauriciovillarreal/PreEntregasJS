@@ -294,14 +294,15 @@ function verOcultarCarrito() {
   contenedorProductos.classList.toggle("oculta")
 }
 
+
 let botonesCategorias = document.getElementsByClassName("filtroCategoria")
 for (const botonCategoria of botonesCategorias) {
-  botonCategoria.addEventListener("click", (e) => filtrarPorCategoria(e, productos))
+  botonCategoria.addEventListener("click", (e) => filtrarPorCategoria(e, productos, carrito))
 }
-function filtrarPorCategoria(e, productos) {
+function filtrarPorCategoria(e, productos, carrito) {
   console.log(e)
   let productosFiltrados = productos.filter(producto => {
     return producto.categoria === e.target.id
   })
-  renderizarProductos(productosFiltrados)
+  renderizarProductos(productosFiltrados, carrito)
 }
