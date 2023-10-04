@@ -138,16 +138,16 @@ h1 span {
 }
 
 .btnCompra {
-  width: 450px;
-  bottom: 10px;
-  right: 15px;
 
-  position: fixed;
+  width: 96%;
+  bottom: 10px;
   background-color: black;
   color: aliceblue;
   padding: 5px;
-
   border: none;
+  position: absolute;
+  justify-content: center;
+  align-items: center;
 }
 
 .tituloCarrito {
