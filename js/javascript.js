@@ -145,7 +145,7 @@ let productos = [
   },
 ]
 let carrito = []
-let carritoRecuperado = localStorage.getItem("carrito")
+let carritoRecuperado = localStorage.getItem("containerCarrito")
 if (carritoRecuperado) {
   carrito = JSON.parse(carritoRecuperado)
 }
@@ -168,7 +168,7 @@ navbar.innerHTML = `
   <h1>TOXIC <span>Cleaning</span></h1>
   
   <div class="filtrar"> 
-  <p>Ver productos por categoria</p>
+  <p>Categorías principales</p>
     <button class="filtroCategoria" id="Ceras Liquidas">CERAS LIQUIDAS</button>
     <button class="filtroCategoria" id="Limpiadores">LIMPIADORES</button>
     <button class="filtroCategoria" id="Perfumes">PERFUMES</button>
@@ -184,14 +184,14 @@ function renderizarProductos(productos, carrito) {
     let tarjeta = document.createElement("div")
     tarjeta.className = "tarjeta col"
     tarjeta.innerHTML = `
-    <div class="h2">${producto.nombre}</div>
+    <div class="h3">${producto.nombre}</div>
     <div class="h6">${producto.categoria}<div>
     <img class=imagenProducto src=./img/${producto.rutaImagen} />
     <hr>
     <p class="h6 text-start">${producto.descripción}</p>
     <div class="h5 text-start">$${producto.precio}</div>
-    <button  class="button" id=${producto.id}>
-    <img src="./img/anadir-al-carrito.png" width="20px">
+    <button  class="button h6" id=${producto.id}>AÑADIR AL <span>CARRITO</span>
+    <img src="./img/anadir-al-carrito.png" width="18px">
     </button>
     `
 
@@ -223,7 +223,7 @@ function agregarProductoAlCarrito(productos, carrito, e) {
       alert("hola")
     }
     productoBuscado.stock--
-    localStorage.setItem("carrito", JSON.stringify(carrito))
+    localStorage.setItem("containerCarrito", JSON.stringify(carrito))
   } else {
     alert("No hay más stock del producto seleccionado")
   }
@@ -234,11 +234,11 @@ function agregarProductoAlCarrito(productos, carrito, e) {
 
 let total = 0;
 function renderizarCarrito(productosEnCarrito) {
-  let divCarrito = document.getElementById("carrito")
-  divCarrito.innerHTML = `<div class="h4">CARRITO DE COMPRA</div>`
+  let divCarrito = document.getElementById("containerCarrito")
+  
   if (productosEnCarrito.length > 0) {
     let total = 0;
-    
+    divCarrito.innerHTML = ""
     productosEnCarrito.forEach(producto => {
       let tarjProdCarrito = document.createElement("div")
 
@@ -277,9 +277,9 @@ function renderizarCarrito(productosEnCarrito) {
 
 
 function finalizarCompra() {
-  let carrito = document.getElementById("carrito")
+  let carrito = document.getElementById("containerCarrito")
   carrito.innerHTML = ""
-  localStorage.removeItem("carrito")
+  localStorage.removeItem("containerCarrito")
 
 }
 
