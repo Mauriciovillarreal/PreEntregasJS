@@ -154,11 +154,11 @@ renderizarCarrito(carrito)
 renderizarProductos(productos, carrito)
 
 let buscador = document.getElementById("buscador")
-buscador.addEventListener('input', () => filtrarYRenderizar(productos));
+buscador.addEventListener('input', () => filtrarYRenderizar(productos, carrito));
 
-function filtrarYRenderizar(productos) {
+function filtrarYRenderizar(productos, carrito) {
   let productosFiltrados = productos.filter(producto => (producto.nombre.toLowerCase()).includes(buscador.value))
-  renderizarProductos(productosFiltrados)
+  renderizarProductos(productosFiltrados, carrito)
 }
 
 let navbar = document.getElementById("navBar")
@@ -305,4 +305,3 @@ function filtrarPorCategoria(e, productos) {
   })
   renderizarProductos(productosFiltrados)
 }
-
