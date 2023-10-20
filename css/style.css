@@ -42,12 +42,15 @@ body {
 }
 
 .tarjeta {
-  margin: 10px 10px;
+  border-radius: 20px;
+  margin: 10px 25px;
   padding: 10px 50px;
   text-align: center;
   background-color: rgb(255, 255, 255);
   color: rgb(0, 0, 0);
-
+  box-shadow: inset 0 -3em 3em rgba(255, 255, 255, 0.377),
+    0 0 0 2px rgb(240, 240, 240),
+    0.3em 0.3em 1em rgba(15, 13, 13, 0.3);
 
 }
 
@@ -56,7 +59,9 @@ body {
   padding-left: 20px;
 }
 
-
+.main {
+  background-color: rgb(29, 29, 29);
+}
 
 h1 {
   text-align: center;
@@ -113,6 +118,13 @@ h1 span {
   border-radius: 6px;
 }
 
+.fondo1 {
+  margin-top: 80px;
+  background-color: rgb(255, 255, 255);
+  width: 100%;
+  border-top-left-radius: 35px;
+  border-bottom-left-radius: 35px;
+}
 .tarjProdCarrito {
   display: grid;
   grid-template-columns: 30% 50%;
@@ -163,16 +175,20 @@ h1 span {
   top: -2px;
   right: -1px;
   position: fixed;
-  z-index: 999;
-  width: 100px;
-  padding: 10px;
+  z-index: 10;
+  padding: 4px 18px;
+  width: 60px;
+
   border-bottom-left-radius: 15px;
+  height: 35px;
 }
+
 
 .button img {
   margin-bottom: 3px;
   margin-left: 50px;
   pointer-events: none;
+  
 }
 
 .button {
@@ -191,9 +207,7 @@ h1 span {
 
 }
 
-#verOcultar img {
-  margin-left: 25px;
-}
+
 
 .pagar {
   bottom: 39px;
@@ -274,11 +288,7 @@ footer p span {
   font-family: "pacifico";
 }
 
-.container2 {
-  background-color: aquamarine;
-  width: 100%;
-  height: 100%;
-}
+
 
 .main {
   font-family: "Montserrat-VariableFont_wght";
@@ -297,8 +307,18 @@ footer p span {
   background-size: cover;
   background-position: center;
   width: 100%;
+  border-bottom-left-radius: 35px;
 
 }
+.tostada {
+  margin-right:  100px;
+  margin-top: 0px;
+  padding: 3px 12px;
+  font-size: 13px;
+  z-index: 1;
+}
+
+
 
 @media screen and (max-width: 1224px) {
   #contenedorProductos {
@@ -309,7 +329,8 @@ footer p span {
   #carrito {
     width: 100%;
     height: 100%;
-    z-index: 999;
+    z-index: 9;
+    position: fixed;
   }
 
   .main {

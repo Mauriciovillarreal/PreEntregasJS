@@ -1,0 +1,146 @@
+[
+    {
+        "id": 51201,
+        "nombre": "Cherry Quick",
+        "categoria": "Ceras Liquidas",
+        "stock": 1,
+        "precio": 1620,
+        "descripción": "600ml + Gatillo. Quick Detail con aroma a cereza, formulado para otorgar un brillo único. Puede ser utilizado en superficies húmedas y secas. También sirve para remover polvillo y marcas de pintura.",
+        "rutaImagen": "cherryquick.jpg"
+    },
+    {
+        "id": 51202,
+        "nombre": "Extreme Detail",
+        "categoria": "Ceras Liquidas",
+        "stock": 3,
+        "precio": 1680,
+        "descripción": "600ml + Gatillo. Quick Detail con aroma a durazno, formulado para otorgar un brillo único. Puede ser utilizado en superficies húmedas y secas. También sirve para remover polvillo y marcas de pintura.",
+        "rutaImagen": "extremedetail.jpg"
+    },
+    {
+        "id": 51203,
+        "nombre": "Waterless",
+        "categoria": "Ceras Liquidas",
+        "stock": 6,
+        "precio": 1580,
+        "descripción": "600ml + Gatillo. Limpiador en seco formulado para suspender la suciedad del vehículo y poder realizar una limpieza sin necesidad de utilizar agua. Contiene agentes lubricantes y ceras.",
+        "rutaImagen": "waterless.jpg"
+    },
+    {
+        "id": 51204,
+        "nombre": "Lava Crush",
+        "categoria": "Ceras Liquidas",
+        "stock": 2,
+        "precio": 2680,
+        "descripción": "600ml + Gatillo. Sellador diseñado para proteger la pintura del vehículo. Formula de polímeros siliconados y resinas que aseguran brillo, repelencia del agua y suavidad al tacto.",
+        "rutaImagen": "lavacrush.jpg"
+    },
+    {
+        "id": 1707,
+        "nombre": "NTP",
+        "categoria": "Exteriores",
+        "stock": 4,
+        "precio": 5980,
+        "descripción": "600ml. Restaura y reacondiciona plásticos y gomas del exterior dejando una terminación satinada. No daña ni deteriora la superficie. Posee pigmentos negros con aroma a café.",
+        "rutaImagen": "ntp.jpg"
+    },
+    {
+        "id": 1708,
+        "nombre": "Blue Magic",
+        "categoria": "Exteriores",
+        "stock": 1,
+        "precio": 6820,
+        "descripción": "600ml. Acondicionador de exterior a base de siliconas. Brinda un excepcional rendimiento y fácil de usar. Otorga una terminación brillante y restauradora.",
+        "rutaImagen": "bluemagic.jpg"
+    },
+    {
+        "id": 1709,
+        "nombre": "Hits Bones",
+        "categoria": "Exteriores",
+        "stock": 1,
+        "precio": 2160,
+        "descripción": "600ml + Gatillo. Protector de pasa ruedas y chasis, muy sencillo de utilizar. Restaura el color de la superficie y brinda protección contra el agua y el paso del tiempo. Fragancia a uva.",
+        "rutaImagen": "hitsbones.jpg"
+    },
+    {
+        "id": 1710,
+        "nombre": "Gel Shine",
+        "categoria": "Exteriores",
+        "stock": 1,
+        "precio": 1960,
+        "descripción": "600ml. Acondicionador de cubiertas por excelencia. Producto elaborado a base de silicona de alta duración y rendimiento que otorga una terminación brillante en la superficie.",
+        "rutaImagen": "gelshine.png"
+    },
+    {
+        "id": 75201,
+        "nombre": "All Clean",
+        "categoria": "Limpiadores",
+        "stock": 7,
+        "precio": 1660,
+        "descripción": "600ml + Gatillo. Limpiador multipropósito, posee un sistema de suspensión de suciedad con gran poder espumógeno.",
+        "rutaImagen": "allclean.jpg"
+    },
+    {
+        "id": 75202,
+        "nombre": "Inferno Gel",
+        "categoria": "Limpiadores",
+        "stock": 4,
+        "precio": 2060,
+        "descripción": "600ml + Gatillo. APC Premium desarrollado para los más exigentes detailers del mercado. Posee un sistema de suspensión de suciedad y gran poder espumógeno con agradable fragancia a rosas.",
+        "rutaImagen": "infernogel.jpg"
+    },
+    {
+        "id": 75203,
+        "nombre": "Formule Conquest",
+        "categoria": "Limpiadores",
+        "stock": 4,
+        "precio": 1980,
+        "descripción": "600ml + Gatillo. Desengrasante con gran poder de limpieza, desarrollado para ser aplicado en llantas y motores. Fórmula concentrada, para usarlo es necesario diluirlo en agua.",
+        "rutaImagen": "formuleconquest.jpg"
+    },
+    {
+        "id": 75204,
+        "nombre": "Iron Warning",
+        "categoria": "Limpiadores",
+        "stock": 10,
+        "precio": 4100,
+        "descripción": "600ml + Gatillo. Descontaminante férrico de llantas el cual actúa eficazmente sobre el polvo de las pastillas de freno. Posee un gran poder de limpieza. Fórmula no diluible, listo para usar.",
+        "rutaImagen": "ironwarning.jpg"
+    },
+    {
+        "id": 561,
+        "nombre": "Party Summer",
+        "categoria": "Perfumes",
+        "stock": 3,
+        "precio": 1100,
+        "descripción": "120ml. Fragancias a base de alcohol.",
+        "rutaImagen": "partysummer.png"
+    },
+    {
+        "id": 562,
+        "nombre": "New Car",
+        "categoria": "Perfumes",
+        "stock": 3,
+        "precio": 1100,
+        "descripción": "120ml. Fragancias a base de alcohol.",
+        "rutaImagen": "newcar.png"
+    },
+    {
+        "id": 563,
+        "nombre": "Lady",
+        "categoria": "Perfumes",
+        "stock": 3,
+        "precio": 1100,
+        "descripción": "120ml. Fragancias a base de alcohol.",
+        "rutaImagen": "lady.png"
+    },
+    {
+        "id": 564,
+        "nombre": "Uva",
+        "categoria": "Perfumes",
+        "stock": 3,
+        "precio": 1100,
+        "descripción": "120ml. Fragancias a base de alcohol.",
+        "rutaImagen": "uva.png"
+    }
+]
