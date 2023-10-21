@@ -182,7 +182,9 @@ h1 span {
   border-bottom-left-radius: 15px;
   height: 35px;
 }
-
+#verOcultar img {
+  z-index: -21;
+}
 
 .button img {
   margin-bottom: 3px;
@@ -216,7 +218,7 @@ h1 span {
   }
 
 .oculta {
-  display: none !important;
+  display: none;
 
   color: aliceblue;
   transition: 15s;
@@ -338,10 +340,6 @@ footer p span {
     box-sizing: border-box;
     margin-left: 0px;
     z-index: -1000;
-  }
-
-  .navbar__me---desktop {
-    display: none;
   }
 
   .main {
